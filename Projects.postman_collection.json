@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "f803922c-6509-427a-95bb-32afd305af14",
+		"name": "Projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "timezones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://worldtimeapi.org/api/timezone",
+					"protocol": "http",
+					"host": [
+						"worldtimeapi",
+						"org"
+					],
+					"path": [
+						"api",
+						"timezone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bogota_timezone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://worldtimeapi.org/api/timezone/America/Bogota",
+					"protocol": "http",
+					"host": [
+						"worldtimeapi",
+						"org"
+					],
+					"path": [
+						"api",
+						"timezone",
+						"America",
+						"Bogota"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

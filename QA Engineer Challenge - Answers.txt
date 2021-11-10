@@ -1,0 +1,44 @@
+Part Two
+----------
+ Scenario: Verify there are more than one  
+    Given the time zone endpoint
+    When the user call the endpoint
+    Then verify the number of time zones are more than one
+
+	  
+ Scenario: Verify the status code 
+    Given the time zone endpoint
+    When the user call the endpoint
+    Then get the expect status code
+      |status_code|
+      |200|
+
+
+ Scenario outline: Verify Bogota time zone abbreviation
+    Given the time zone endpoint
+    When the user call the endpoint for the Bogota time zone
+    Then get the expect abbreviation result
+      |abbreviation_code|expected_result|
+      |-05|true|
+	  |05|false|
+	
+
+------------------------------------------------------------------
+Part Three
+----------
+	String sApi = "http://worldtimeapi.org/api/timezone";
+	JsonNode body = Unirest.get(sApi)
+							.asJson()
+							.getBody();
+	assertEquals(body.length, greaterThan(1));
+
+
+
+
+
+
+
+
+
+
+	
